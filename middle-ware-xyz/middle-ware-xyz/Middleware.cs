@@ -16,10 +16,7 @@ namespace xyz.middleware
         }
 
        
-        //delegate is interface for function pointer
-        public delegate void ToWrap();
-
-        public void Wrapper(ToWrap function){
+        public void Wrapper(Action function){
             consoleWrite("starts here");
             function();
             consoleWrite("ends here");
