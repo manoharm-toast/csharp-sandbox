@@ -22,9 +22,14 @@ namespace xyz.middleware
             consoleWrite("ends here");
         }
 
+        public void Try(Action function){
+            function();
+        }
+
+
          public void main(){
-            Wrapper(FirstMethod);
-            Wrapper(SecondMethod);
+            Try(() => Wrapper(FirstMethod));
+            Try(() => Wrapper(SecondMethod));        
         }
     }
 }
